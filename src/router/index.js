@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PokeList from '../views/PokeList.vue'
 import PokeDetails from '../views/PokeDetails.vue'
 import FavoritesView from '../views/FavoritesView.vue'
-import HelloWorld from '../components/HelloWorld.vue'
+import AboutPage from '../views/AboutPage.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,8 +26,7 @@ const router = createRouter({
         {
             path: '/about',
             name: 'about',
-            component: HelloWorld,
-            props: { msg: "À propos de ce Pokédex" }
+            component: AboutPage
         }
     ]
 })

@@ -1,12 +1,14 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <template>
   <header>
     <nav class="navbar">
       <RouterLink to="/">Liste</RouterLink>
-      <RouterLink to="/pokemon/1">Détails</RouterLink>
+      <RouterLink to="/pokemon/1" :class="{ 'router-link-active': route.name === 'details' }">Détails</RouterLink>
       <RouterLink to="/favorites">Favoris</RouterLink>
       <RouterLink to="/about">À propos</RouterLink>
     </nav>
