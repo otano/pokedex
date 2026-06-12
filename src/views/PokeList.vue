@@ -18,7 +18,7 @@ const fetchPokemon = async () => {
 }
 
 const goToDetails = (pokemon) => {
-  router.push({ name: 'details', params: { id: pokemon.pokedexId } })
+  router.push({ name: 'details', params: { id: pokemon.pokedex_id } })
 }
 
 onMounted(() => {
@@ -32,18 +32,18 @@ onMounted(() => {
       <!-- Liste des Pokémon -->
       <div 
         v-for="pokemon in pokemonList" 
-        :key="pokemon.pokedexId" 
+        :key="pokemon.pokedex_id" 
         class="pokemon-card"
         @click="goToDetails(pokemon)"
       >
         <div class="card-header">
-          <span class="number">#{{ pokemon.pokedexId }}</span>
+          <span class="number">#{{ pokemon.pokedex_id }}</span>
           <button 
             class="favorite-btn" 
-            :class="{ active: isFavorite(pokemon.pokedexId) }"
+            :class="{ active: isFavorite(pokemon.pokedex_id) }"
             @click.stop="toggleFavorite(pokemon)"
           >
-            {{ isFavorite(pokemon.pokedexId) ? '★' : '☆' }}
+            {{ isFavorite(pokemon.pokedex_id) ? '★' : '☆' }}
           </button>
         </div>
         <div class="img-wrapper">

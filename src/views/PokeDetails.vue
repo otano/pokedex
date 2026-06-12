@@ -44,13 +44,13 @@ watch(() => route.params.id, (newId) => {
           <h1>{{ pokemon.name.fr }}</h1>
           <button 
             class="favorite-btn" 
-            :class="{ active: isFavorite(pokemon.pokedexId) }"
+            :class="{ active: isFavorite(pokemon.pokedex_id) }"
             @click="toggleFavorite(pokemon)"
           >
-            {{ isFavorite(pokemon.pokedexId) ? '★' : '☆' }}
+            {{ isFavorite(pokemon.pokedex_id) ? '★' : '☆' }}
           </button>
         </div>
-        <span class="pokedex-id">N° {{ pokemon.pokedexId }}</span>
+        <span class="pokedex-id">N° {{ pokemon.pokedex_id }}</span>
       </div>
 
       <div class="content">

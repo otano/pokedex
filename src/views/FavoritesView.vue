@@ -6,7 +6,7 @@ const router = useRouter()
 const { favorites, isFavorite, toggleFavorite, clearFavorites } = useFavorites()
 
 const goToDetails = (pokemon) => {
-  router.push({ name: 'details', params: { id: pokemon.pokedexId } })
+  router.push({ name: 'details', params: { id: pokemon.pokedex_id } })
 }
 </script>
 
@@ -27,12 +27,12 @@ const goToDetails = (pokemon) => {
     <div v-else class="container">
       <div 
         v-for="pokemon in favorites" 
-        :key="pokemon.pokedexId" 
+        :key="pokemon.pokedex_id" 
         class="pokemon-card"
         @click="goToDetails(pokemon)"
       >
         <div class="card-header">
-          <span class="number">#{{ pokemon.pokedexId }}</span>
+          <span class="number">#{{ pokemon.pokedex_id }}</span>
           <button 
             class="favorite-btn active" 
             @click.stop="toggleFavorite(pokemon)"
