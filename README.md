@@ -1,5 +1,24 @@
-# Vue 3 + Vite
+À propos de ce Pokédex
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+![vuebypokemon](pokevu.png)
+
+⚡
+Vue.js
+
+Application construite avec Vue 3 et Vite, utilisant le système de composants monofichiers (SFC), Vue Router pour la navigation et un store réactif pour la persistance des favoris.
+
+Composants réactifs avec 
+Routing SPA avec vue-router
+Store réactif partagé (composable + localStorage)
+Appels API asynchrones avec fetch
+
+
+📦
+Tyradex API
+Les données des Pokémon sont fournies par l'API ouverte Tyradex. Aucune base de données locale — l'application interroge l'API en temps réel pour afficher la liste et les détails.
+
+🎓
+Projet EPSI
+Réalisé dans le cadre du cours Framework JavaScript — Vue 3 à l'EPSI. L'objectif est de découvrir l'écosystème Vue à travers une application concrète.
+
